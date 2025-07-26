@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحه اصلی | StarSmp</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+            color: #ffffff;
+            background-image: url("https://wallpaperaccess.ir/upload/picture-270/shakhes/SHAKHES.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(30, 30, 30, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            flex-wrap: wrap;
+        }
+
+        .search-box input {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 220px;
+            background-color: #3a3a3a;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input::placeholder {
+            color: #bbb;
+        }
+
+        .search-box input:focus {
+            background-color: #4a4a4a;
+            transform: scale(1.02);
+        }
+
+        .btns .btn {
+            background-color: #5cbf60;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 12px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .btns .btn:hover {
+            background-color: #7dd77f;
+            transform: scale(1.05);
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #5cbf60;
+        }
+
+        .btn-main {
+            background-color: #5cbf60;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-main:hover {
+            background-color: #7dd77f;
+            transform: scale(1.05);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px auto 60px auto;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background-color: rgba(50, 50, 50, 0.85);
+            color: #ffffff;
+            padding: 40px 20px;
+            width: 160px;
+            border-radius: 12px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid #666;
+        }
+
+        .box:hover {
+            background-color: #5cbf60;
+            color: #1b1b1b;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(40, 40, 40, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        footer h3 {
+            color: #5cbf60;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #9fffa0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* 🔧 ریسپانسیو برای موبایل */
+        @media screen and (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .search-box input {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+
+            .btns {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .box {
+                width: 80%;
+            }
+
+            .btn-main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+{% if request.args.get("error") == "not_registered" %}
+<div class="bottom-alert">
+  ثبت‌نام نکردی! لطفاً اول ثبت‌نام کن.
+</div>
+
+<style>
+.bottom-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5cbf60;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+</style>
+{% endif %}
+<body>
+    <div class="overlay">
+        <div class="topbar">
+            <div class="search-box">
+                <input type="text" placeholder="جستجو...">
+            </div>
+            <div class="btns">
+                <span class="btn disabled">ثبت‌نام</span>
+                <span class="season-lock">🔒 قفل در فصل ۲ باز می‌شود</span>
+            </div>
+        </div>
+
+        <div class="header">
+            <h1>به سرور استــــــار خوش اومدی </h1>
+            <p>رایگان و بدون محدودیت بازی کن</p>
+            <a href="{{ url_for('play') }}" class="btn-main">شروع بازی</a>
+        </div>
+
+      <div class="container">
+    <div class="box">
+        <a href="/rank" style="color: inherit; text-decoration: none;">🛒 خرید رنک</a>
+    </div>
+    <div class="box">
+        <a href="{{ url_for('report') }}" style="color: inherit; text-decoration: none;">📣 گزارش بازیکن</a>
+    </div>
+    <div class="box">
+        <a href="{{ url_for('top') }}" style="color: inherit; text-decoration: none;">🏅 برترین پلیرها</a>
+    </div>
+    <div class="box">
+        🧱 بزودی
+    </div>
+</div>
+        <footer>
+            <h3>درباره استار اس ام پی </h3>
+            <p>.این سایت ساخته شده توسط استارتیم است و هیچ قوانینی را نقض نکرده است</p>
+            <div>
+                <a href="{{ url_for('home') }}" class="footer-btn">🏠 خانه</a>
+                <a href="{{ url_for('tutorials') }}" class="footer-btn">📖 آموزش‌ها</a>
+                <a href="{{ url_for('contact') }}" class="footer-btn">📞 تماس با ما</a>
+                <a href="https://t.me/StarSmpChannel" class="footer-btn">📱 تلگرام</a>
+            </div>
+            <div class="copyright">
+                © 2025 Powered By StarTeam 💚
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

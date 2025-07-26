@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ورود | StarSmp</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+            color: #ffffff;
+            background-image: url("https://wallpaperaccess.ir/upload/picture-270/shakhes/SHAKHES.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-box {
+            background-color: rgba(40, 40, 40, 0.95);
+            padding: 40px 30px;
+            border-radius: 12px;
+            width: 350px;
+            border: 1px solid #666;
+        }
+        .form-box h2 {
+            text-align: center;
+            color: #5cbf60;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: #3a3a3a;
+            color: #fff;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+        input::placeholder {
+            color: #aaa;
+        }
+        .btn {
+            background-color: #5cbf60;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #7dd77f;
+            transform: scale(1.03);
+        }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .link a {
+            color: #9fffa0;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ff7373;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="form-box">
+            <h2>ورود به StarSmp</h2>
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+            <form method="POST" action="/login">
+                <label for="username">نام کاربری</label>
+                <input type="text" id="username" name="username" placeholder="مثلاً StarHero" required>
+
+                <label for="password">رمز عبور</label>
+                <input type="password" id="password" name="password" placeholder="رمز ورود" required>
+
+                <button type="submit" class="btn">ورود</button>
+            </form>
+            <div class="link">
+                هنوز ثبت‌نام نکردی؟ <a href="{{ url_for('signup') }}">اکانت بساز</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

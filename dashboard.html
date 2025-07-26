@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>داشبورد | StarSmp</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+            color: #ffffff;
+            background-image: url("https://wallpaperaccess.ir/upload/picture-270/shakhes/SHAKHES.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #5cbf60;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 32px;
+        }
+        .username {
+            background-color: rgba(40, 40, 40, 0.9);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-bottom: 40px;
+            border: 1px solid #666;
+        }
+        .actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            background-color: #5cbf60;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 140px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #7dd77f;
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>🎮 داشبورد StarSmp</h1>
+        <div class="username">خوش اومدی {{ username }} عزیز! 💚</div>
+
+        <div class="actions">
+            <a href="{{ url_for('play') }}" class="btn">شروع بازی</a>
+            <a href="#" class="btn">خرید آیتم</a>
+            <a href="#" class="btn">پروفایل من</a>
+            <a href="{{ url_for('logout') }}" class="btn">خروج</a>
+        </div>
+
+        <footer>
+            © 2025 توسط استارتیم | Minecraft For Everyone 🌍
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>گزارش بازیکن | StarSMP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      color: #fff;
+      background-image: url("https://wallpaperaccess.ir/upload/picture-270/shakhes/SHAKHES.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 15px;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-box {
+      background-color: rgba(50, 50, 50, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.4);
+    }
+
+    .form-box label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    .form-box input,
+    .form-box select,
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3a3a3a;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    .form-box textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4d4d;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-box button:hover {
+      background-color: #ff7777;
+      transform: scale(1.03);
+    }
+
+    .back-link {
+      margin-top: 25px;
+      text-decoration: none;
+      color: #9fffa0;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>📣 گزارش بازیکن</h1>
+    <p class="subtitle">اگر بازیکنی رفتار نامناسب یا تقلب داشت، لطفاً فرم زیر را پر کنید</p>
+
+    <div class="form-box">
+      <form method="POST" action="/report">
+        <label for="player_name">نام بازیکن:</label>
+        <input type="text" id="player_name" name="player_name" required>
+
+        <label for="type">نوع تخلف:</label>
+        <select id="type" name="type" required>
+          <option value="">— انتخاب کنید —</option>
+          <option>چیت / تقلب</option>
+          <option>توهین</option>
+          <option>اسپم / مزاحمت</option>
+          <option>سایر</option>
+        </select>
+
+        <label for="details">توضیحات:</label>
+        <textarea id="details" name="details" placeholder="در صورت نیاز، جزئیات را بنویسید..."></textarea>
+
+        <button type="submit">📨 ارسال گزارش</button>
+      </form>
+    </div>
+
+    <a href="/" class="back-link">⬅️ برگشت به صفحه اصلی</a>
+  </div>
+</body>
+</html>

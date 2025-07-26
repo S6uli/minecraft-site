@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>خرید رنک | StarSMP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', Tahoma, sans-serif;
+      color: #ffffff;
+      background-image: url("https://wallpaperaccess.ir/upload/picture-270/shakhes/SHAKHES.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #5cbf60;
+    }
+
+    .ranks-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .rank-card {
+      background-color: rgba(50, 50, 50, 0.85);
+      border-radius: 12px;
+      padding: 30px 20px;
+      width: 240px;
+      border: 2px solid #666;
+      box-shadow: 0 0 12px #333;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .rank-card:hover {
+      transform: scale(1.05);
+      border-color: #5cbf60;
+      box-shadow: 0 0 20px #5cbf60;
+    }
+
+    .rank-card.vip { border-color: gold; box-shadow: 0 0 12px gold; }
+    .rank-card.elite { border-color: silver; box-shadow: 0 0 12px silver; }
+    .rank-card.master { border-color: #9fffa0; box-shadow: 0 0 12px #9fffa0; }
+
+    .rank-card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #9fffa0;
+    }
+
+    .rank-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .rank-card ul li {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #5cbf60;
+      margin-bottom: 15px;
+    }
+
+    .btn-main {
+      background-color: #5cbf60;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+      background-color: #7dd77f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="header">
+      <h1>خرید رنک های ویژه</h1>
+      <p>برای دسترسی بهتر و امکانات خاص، یکی از رنک‌ها رو انتخاب کن</p>
+    </div>
+
+    <div class="ranks-container">
+      <div class="rank-card vip">
+        <h2>VIP</h2>
+        <ul>
+          <li>اولویت ورود به سرور</li>
+          <li>رنگ چت طلایی</li>
+          <li>10% سرعت بیشتر</li>
+        </ul>
+        <div class="price">💸 25 هزار تومان</div>
+        <button class="btn-main">درخواست خرید</button>
+      </div>
+
+      <div class="rank-card elite">
+        <h2>ELITE</h2>
+        <ul>
+          <li>امکانات VIP</li>
+          <li>اسکین اختصاصی</li>
+          <li>آیتم‌های ماهانه</li>
+        </ul>
+        <div class="price">💸 40 هزار تومان</div>
+        <button class="btn-main">درخواست خرید</button>
+      </div>
+
+      <div class="rank-card master">
+        <h2>MASTER</h2>
+        <ul>
+          <li>همه امکانات قبلی</li>
+          <li>تگ اختصاصی در لیدربورد</li>
+          <li>پشتیبانی سریع</li>
+        </ul>
+        <div class="price">💸 65 هزار تومان</div>
+        <button class="btn-main">درخواست خرید</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

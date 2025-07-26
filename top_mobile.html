@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>برترین بازیکن‌ها | StarSMP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.2, maximum-scale=1.2">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      color: #fff;
+      background-image: url("https://wallpapercave.com/wp/wp9348516.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #2ecc71;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 16px;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .leaderboard {
+      width: 100%;
+      max-width: 420px;
+      background-color: rgba(50, 50, 50, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+      overflow: hidden;
+    }
+
+    .leaderboard-header {
+      background-color: #27ae60;
+      color: white;
+      padding: 14px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .player-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-bottom: 1px solid #444;
+      font-size: 15px;
+    }
+
+    .player-row:nth-child(odd) {
+      background-color: #2e2e2e;
+    }
+
+    .player-row:hover {
+      background-color: #3e3e3e;
+    }
+
+    .gold { color: gold; font-weight: bold; }
+    .silver { color: silver; font-weight: bold; }
+    .bronze { color: #cd7f32; font-weight: bold; }
+
+    .back-box {
+      margin-top: 30px;
+      background-color: #27ae60;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px #0005;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      color: #c3ffd0;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1> پلیرهای برتر StarSMP</h1>
+    <p class="subtitle">بر اساس امتیاز و فعالیت در سرور</p>
+
+    <div class="leaderboard">
+      <div class="leaderboard-header">
+        <span>رتبه</span>
+        <span>نام</span>
+        <span>کیل</span>
+      </div>
+
+      <div class="player-row gold">
+        <span>🥇 1</span>
+        <span>- - -</span>
+        <span>0</span>
+      </div>
+      <div class="player-row silver">
+        <span>🥈 2</span>
+        <span>- - -</span>
+        <span>0</span>
+      </div>
+      <div class="player-row bronze">
+        <span>🥉 3</span>
+        <span>- - -</span>
+        <span>0</span>
+      </div>
+      <!-- می‌تونی اینجا بقیه پلیرها رو به صورت داینامیک با Jinja اضافه کنی -->
+    </div>
+
+    <div class="back-box">
+      <a href="/" class="back-link"> برگشت به صفحه اصلی</a>
+    </div>
+  </div>
+</body>
+</html>

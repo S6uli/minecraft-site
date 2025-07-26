@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ثبت‌نام | StarSmp</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 60px;
+    }
+
+    h1 {
+      color: #5cbf60;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ccc;
+      text-align: center;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background-color: #5cbf60;
+      color: #fff;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #7dd77f;
+      transform: scale(1.05);
+    }
+
+    .form-box {
+      background-color: #2b2b2b;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-box h2 {
+      color: #5cbf60;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-box label {
+      align-self: flex-start;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3a3a3a;
+      color: #fff;
+    }
+
+    .form-box input:focus {
+      outline: none;
+      background-color: #4a4a4a;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5cbf60;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-box button:hover {
+      background-color: #7dd77f;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <h1>لطفا برای ورود فرم زیر رو پر کن</h1>
+  <p>تمام حقوق محفوظ شده میباشد</p>
+
+ <div class="form-box">
+  <h2>ثبت‌نام در سرور</h2>
+  <form method="POST" action="/register">
+    <label for="username">نام کاربری:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">ایمیل:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">رمز عبور:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="age">شماره تلفن:</label>
+    <input type="number" id="age" name="age">
+
+    <button class="btn" type="submit">ثبت‌نام</button>
+  </form>
+</div>
+
+<a href="{{ url_for('index') }}" class="btn">برگشت به صفحه اصلی</a>
